@@ -4,11 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 4</title>
+    <title>Frontend with Database</title>
 </head>
 
 <body>
+    <h1>Data from database</h1>
 
+    mongoDB:<input type="checkbox" name="" id="mongoDB"> PostgreSQL: <input type="checkbox" id="postgreDB">
+    <button onclick=printData()>Search</button>
+    <br>
+    <div>
+        <form action=""> Make new employee or if name exists modify employee <br>
+            <input type="text" id="name" placeholder="name"><br>
+            <input type="text" id="position" placeholder="position"><br>
+            <input type="text" id="salary" placeholder="salary">
+
+            <button onclick=update(event)>Submit</button>
+
+        </form>
+        <br>
+        <input type="text" placeholder="employee name to delete" id="delete">
+        <button onclick=deleteEmployee()>Delete</button>
+
+    </div>
+
+
+    <ul id="data-list"></ul>
+    <script src="main.js"></script>
 </body>
 
 </html>
